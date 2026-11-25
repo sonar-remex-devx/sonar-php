@@ -18,7 +18,7 @@ jobs:
       statuses: write
       contents: read
     steps:
-      - uses: SonarSource/gh-action_releasability/releasability-status@v3
+      - uses: SonarSource/gh-action_releasability/releasability-status@c6b5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7 # v3
         with:
           optional_checks: 'Jira'
         env:
