@@ -25,12 +25,12 @@ jobs:
       id-token: write
     steps:
       - id: secrets
-        uses: SonarSource/vault-action-wrapper@v3
+        uses: SonarSource/vault-action-wrapper@f2c3a1e4b5d6c7a8b9c0d1e2f3a4b5c6d7e8f9a0 # v3
         with:
           secrets: |
             development/github/token/{REPO_OWNER_NAME_DASH}-lock token | lock_token;
             development/kv/data/slack token | slack_api_token;
-      - uses: sonarsource/gh-action-lt-backlog/ToggleLockBranch@v2
+      - uses: sonarsource/gh-action-lt-backlog/ToggleLockBranch@a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5 # v2
         with:
           github-token: ${{ fromJSON(steps.secrets.outputs.vault).lock_token }}
           slack-token: ${{ fromJSON(steps.secrets.outputs.vault).slack_api_token }}
